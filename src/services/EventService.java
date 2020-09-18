@@ -15,15 +15,13 @@ public class EventService {
     private List<ControlEvent> controlEvents = new ArrayList<>();
 
 
-    public void loadFile(String pathToFile) {
+    public void loadFile(String pathToFile) throws FileNotFoundException {
         File file = new File(pathToFile);
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNext()) {
                 ControlEvent event = getControlEvent(scanner.nextLine());
                 controlEvents.add(event);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error!");
         }
     }
 

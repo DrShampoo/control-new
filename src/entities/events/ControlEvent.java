@@ -31,24 +31,12 @@ public abstract class ControlEvent {
         return exams;
     }
 
-    public void setExams(List<Exam> exams) {
-        this.exams = exams;
-    }
-
     public double getPassingScore() {
         return passingScore;
     }
 
-    public void setPassingScore(double passingScore) {
-        this.passingScore = passingScore;
-    }
-
     public List<Test> getTests() {
         return tests;
-    }
-
-    public void setTests(List<Test> tests) {
-        this.tests = tests;
     }
 
     public boolean isSessionPassed() {

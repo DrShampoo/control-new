@@ -11,15 +11,12 @@ import java.util.List;
 public class EventChecker {
 
     public static void isPassedSession(FirstControlEvent controlEvent) {
-        List<Exam> exams = controlEvent.getExams();
         double sumScore = calculateSumScore(controlEvent.getExams());
         boolean isPassed = sumScore >= controlEvent.getPassingScore();
         controlEvent.setSessionPassed(isPassed);
     }
 
     public static void isPassedSession(SecondControlEvent controlEvent) {
-        List<Exam> exams = controlEvent.getExams();
-        List<Test> tests = controlEvent.getTests();
         double sumScore = calculateSumScore(controlEvent.getExams());
         boolean isPassed = sumScore >= controlEvent.getPassingScore() && isTestsPassed(controlEvent.getTests());
         controlEvent.setSessionPassed(isPassed);

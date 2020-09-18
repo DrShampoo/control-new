@@ -12,7 +12,4 @@ public class Test {
         return isPassed;
     }
 
-    public void setPassed(boolean passed) {
-        this.isPassed = passed;
-    }
 }

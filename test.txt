@@ -12,3 +12,5 @@ ControlEvent 1:3, 9
 ControlEvent 2:9.5, false
 ControlEvent 3:true, false, true
 ControlEvent 1:6, 14
+ControlEvent 3:false, true, true
+ControlEvent 2:6, true

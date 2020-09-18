@@ -13,6 +13,6 @@ public class SecondControlEvent extends ControlEvent {
 
     @Override
     public String toString() {
-        return "Control entities.event №2: total - " + this.isSessionPassed();
+        return "Control event №2: the result - " + this.isSessionPassed();
     }
 }

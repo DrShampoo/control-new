@@ -13,6 +13,6 @@ public class FirstControlEvent extends ControlEvent {
 
     @Override
     public String toString() {
-        return "Control event №1: total - " + this.isSessionPassed();
+        return "Control event №1: the result - " + this.isSessionPassed();
     }
 }

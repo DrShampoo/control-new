@@ -1,13 +1,20 @@
 import services.EventService;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         EventService collectionEvents = new EventService();
         Scanner scanner = new Scanner(System.in);
-        collectionEvents.loadFile(args[0]);
+        try {
+            collectionEvents.loadFile(args[0]);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!");
+            return;
+        }
         chooseMenu(collectionEvents, scanner);
+        scanner.close();
     }
 
     private static void chooseMenu(EventService collectionEvents, Scanner scanner) {

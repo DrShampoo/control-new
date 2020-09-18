@@ -12,6 +12,6 @@ public class ThirdControlEvent extends ControlEvent {
 
     @Override
     public String toString() {
-        return "Control entities.event №3: total - " + this.isSessionPassed();
+        return "Control event №3: the result - " + this.isSessionPassed();
     }
 }
